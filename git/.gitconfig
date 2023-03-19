@@ -1,0 +1,26 @@
+[user]
+	email = reworkk7@gmail.com
+	name = riorq00
+[init]
+	defaultBranch = master
+[alias]
+  reslast = reset HEAD~1 ; reset last commit
+  ad = add
+  adp = add -p
+  ci = commit -m
+  cm = commit -am
+  st = status
+  stb = status -sb
+  p = push
+  last = log -1 HEAD --stat
+  d = diff
+  co = checkout
+  cob = checkout -b
+  br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+[difftool]
+    prompt = true
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
