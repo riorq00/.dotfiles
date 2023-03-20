@@ -9,7 +9,7 @@ local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
 --local awidgets = require("awesome-wm-widgets")
-local lain = require("lain")
+--local lain = require("lain")
 local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 local wibox = require("wibox")
 local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
