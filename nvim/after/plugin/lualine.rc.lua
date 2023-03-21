@@ -30,6 +30,14 @@ lualine.setup({
       },
       "encoding",
       "filetype",
+      {
+        "fileformat",
+        symbols = {
+          unix = "", -- e712
+          dos = "", -- e70f
+          mac = "", -- e711
+        },
+      },
     },
     lualine_y = { "progress" },
     lualine_z = { "location" },
