@@ -57,7 +57,7 @@ end
 -- widgets
 
 -- Separator
-tbox_separator = wibox.widget.textbox("  ")
+tbox_separator = wibox.widget.textbox("  ")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
@@ -259,15 +259,19 @@ awful.screen.connect_for_each_screen(function(s)
 			layout = wibox.layout.fixed.horizontal,
 			--mykeyboardlayout,
 			tbox_separator,
+			mytextclock,
+			tbox_separator,
 			brightness_widget({
-				type = "icon_and_text",
+				--type = "icon_and_text",
 				program = "brightnessctl",
 				step = 2,
 			}),
 			tbox_separator,
 			volume_widget({
 				mixer_cmd = "pavucontrol",
-				widget_type = "icon_and_text",
+				--widget_type = "icon_and_text",
+				widget_type = "arc",
+				mute_color = "#CB4B16",
 				with_icon = true,
 				step = 2,
 				device = "default",
@@ -281,8 +285,6 @@ awful.screen.connect_for_each_screen(function(s)
 					volume_widget:toggle()
 				end),
 			}),
-			tbox_separator,
-			mytextclock,
 			tbox_separator,
 			wibox.widget.systray(),
 			tbox_separator,
