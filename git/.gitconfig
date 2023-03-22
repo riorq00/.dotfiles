@@ -1,9 +1,23 @@
 [user]
-	email = reworkk7@gmail.com
-	name = riorq00
+  email = reworkk7@gmail.com
+  name = riorq00
 [init]
-	defaultBranch = master
+  defaultBranch = master
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
 [alias]
+  br = branch
+  ba = branch -a
+  bm = branch --merged
+  bn = branch --no-merged
+  pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
+  ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+  a = "!git status --short | peco | awk '{print $2}' | xargs git add"
   reslast = reset HEAD~1 ; reset last commit
   ad = add
   adp = add -p
@@ -17,10 +31,14 @@
   co = checkout
   cob = checkout -b
   br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
   lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+  llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
 [difftool]
-    prompt = true
+  prompt = true
 [diff]
-    tool = nvimdiff
+  tool = nvimdiff
 [difftool "nvimdiff"]
-    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[core]
+	editor = nvim
