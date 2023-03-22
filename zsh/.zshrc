@@ -21,9 +21,10 @@ alias lof="xset led off"
 
 
 alias ls="exa -a --icons"
-alias ll="exa -la --icons"
+alias ll="exa -la -g --icons"
 alias g="git"
 alias vim="nvim"
+alias vimdiff="nvim -d"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
