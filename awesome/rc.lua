@@ -640,6 +640,7 @@ end)
 beautiful.useless_gap = 4
 
 -- Autostart
+awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("xset s off")
 awful.spawn.with_shell("xset -dpms")
