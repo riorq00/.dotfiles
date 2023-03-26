@@ -13,6 +13,8 @@ require("awful.autofocus")
 local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 local wibox = require("wibox")
 local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+local wifi_widget = require("awesome-wm-widgets.wifi-widget.wifi")
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -57,6 +59,7 @@ end
 -- widgets
 
 -- Separator
+-- tbox_separator = wibox.widget.textbox("  ")
 tbox_separator = wibox.widget.textbox("  ")
 
 -- {{{ Variable definitions
@@ -247,7 +250,6 @@ awful.screen.connect_for_each_screen(function(s)
 			layout = wibox.layout.fixed.horizontal,
 			--mykeyboardlayout,
 			tbox_separator,
-			mytextclock,
 			tbox_separator,
 			brightness_widget({
 				type = "icon_and_text",
@@ -257,27 +259,20 @@ awful.screen.connect_for_each_screen(function(s)
 			tbox_separator,
 			volume_widget({
 				mixer_cmd = "pavucontrol",
-				--widget_type = "icon_and_text",
-				widget_type = "icon",
+				widget_type = "icon_and_text",
 				mute_color = "#CB4B16",
 				with_icon = true,
 				step = 2,
 				device = "default",
-				awful.key({ modkey }, "]", function()
-					volume_widget:inc(5)
-				end),
-				awful.key({ modkey }, "[", function()
-					volume_widget:dec(5)
-				end),
-				awful.key({ modkey }, "\\", function()
-					volume_widget:toggle()
-				end),
 			}),
 			tbox_separator,
-			wibox.widget.systray(),
+			battery_widget({}),
 			tbox_separator,
 			logout_menu_widget(),
 			tbox_separator,
+			mytextclock,
+			tbox_separator,
+			wibox.widget.systray(),
 			s.mylayoutbox,
 		},
 	})
