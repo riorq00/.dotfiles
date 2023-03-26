@@ -390,8 +390,17 @@ globalkeys = gears.table.join(
 			history_path = awful.util.get_cache_dir() .. "/history_eval",
 		})
 	end, { description = "lua execute prompt", group = "awesome" }),
-	-- Menubar
+
 	awful.key({ modkey }, "p", function()
+		awful.spawn.with_shell("/home/riorq/.config/rofi/launchers/type-2/launcher.sh")
+	end, { description = "launcher rofi", group = "launcher" }),
+
+	awful.key({ modkey }, "F4", function()
+		awful.spawn.with_shell("/home/riorq/.config/rofi/scripts/rofi-wifi-menu.sh")
+	end, { description = "launcher rofi", group = "launcher" }),
+
+	-- Menubar
+	awful.key({ modkey }, "F3", function()
 		menubar.show()
 	end, { description = "show the menubar", group = "launcher" })
 )
