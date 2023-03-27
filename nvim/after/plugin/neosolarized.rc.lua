@@ -28,6 +28,17 @@ Group.new("Visual", colors.none, colors.base03, styles.reverse)
 Group.new("SagaNormal", colors.none, colors.background, styles.NONE)
 Group.new("CmpItemMenu", colors.none, colors.background, styles.NONE)
 
+-- CHANGE SOME COLORS TO THE OLD VERSION OF THE THEME
+-- n.Group.new("@parameter", n.colors.base0)
+-- n.Group.new("@variable", n.colors.blue)
+-- n.Group.new("Special", colors.red)
+-- n.Group.new("Preproc", colors.orange)
+
+-- CHANGE PUNCTUATION COLOR TO RED (LIKE OLD VERSION)
+-- n.Group.new("@punctuation.delimiter", colors.red)
+-- n.Group.new("@punctuation.bracket", colors.red)
+-- n.Group.new("@punctuation.special", colors.red) ]]
+
 local cError = groups.Error.fg
 local cInfo = groups.Information.fg
 local cWarn = groups.Warning.fg
