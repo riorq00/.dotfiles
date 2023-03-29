@@ -19,7 +19,7 @@ end
 lazy.setup({
   {
     "uga-rosa/translate.nvim",
-    event = "BufRead",
+    event = "LspAttach",
     cmd = "Translate",
     config = function()
       require("translate").setup({
