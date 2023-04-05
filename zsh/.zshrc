@@ -28,5 +28,7 @@ alias g="git"
 alias vim="nvim"
 alias vimdiff="nvim -d"
 
+. /opt/asdf-vm/asdf.sh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
