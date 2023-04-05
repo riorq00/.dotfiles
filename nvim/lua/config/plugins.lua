@@ -191,10 +191,6 @@ lazy.setup({
   {
     "folke/zen-mode.nvim",
   },
-
-  {
-    "iamcco/markdown-preview.nvim",
-  },
   {
     "akinsho/nvim-bufferline.lua",
     event = "VeryLazy",
