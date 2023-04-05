@@ -43,4 +43,16 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+-- Open menu of translate
 keymap.set({ "n", "v" }, "em", require("config.translates.init"), opts)
+
+-- Autotranslate to english
+keymap.set("n", "tra", "<S-v>:Translate en<CR>", opts)
+
+vim.cmd([[
+  map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
+  imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
+
+]])
+
+vim.g.phyton3_host_prog = "/usr/local/bin/python3"
