@@ -6,7 +6,7 @@ end
 ts.setup({
   highlight = {
     enable = true,
-    disable = { "c", "cpp" },
+    disable = {},
   },
   indent = {
     enable = true,
