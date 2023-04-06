@@ -48,32 +48,33 @@ lazy.setup({
 
   {
     "gpanders/editorconfig.nvim",
+    event = "VeryLazy",
   },
 
   {
     "folke/tokyonight.nvim",
-    enabled = true,
+    enabled = false,
     priority = 1000,
     lazy = true,
     event = "BufEnter",
     config = function()
-      --      vim.cmd([[colorscheme tokyonight]])
+      -- vim.cmd([[colorscheme tokyonight]])
     end,
   },
 
   {
     "jose-elias-alvarez/typescript.nvim",
+    event = "VeryLazy",
+    ft = { "typescript", "tsx" },
   },
 
   {
-    "rhysd/vim-clang-format",
-    config = true,
-  },
-  {
     "mfussenegger/nvim-dap",
+    event = "VeryLazy",
   },
   {
     "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
   },
   {
     "tjdevries/colorbuddy.nvim",
@@ -101,10 +102,12 @@ lazy.setup({
 
   {
     "nvim-lua/plenary.nvim",
+    event = "VeryLazy",
   }, -- Common utilities
 
   {
     "onsails/lspkind-nvim",
+    event = "VeryLazy",
   }, -- vscode-like pictograms
 
   {
@@ -121,6 +124,7 @@ lazy.setup({
   {
     "williamboman/mason.nvim",
     cmd = "Mason",
+    event = "VeryLazy",
   },
 
   {
@@ -141,20 +145,21 @@ lazy.setup({
   {
     "glepnir/lspsaga.nvim",
     event = "BufRead",
-    config = function() end,
   }, -- LSP UIs
 
   {
     "L3MON4D3/LuaSnip",
+    event = "VeryLazy",
   },
 
   {
     "nvim-treesitter/nvim-treesitter",
     version = false,
     event = { "BufReadPost", "BufNewFile" },
-    build = function()
+    --[[ build = function()
       require("nvim-treesitter.install").update({ with_sync = true })
-    end,
+    end, ]]
+    build = ":TSUpdate",
   },
 
   {
@@ -166,10 +171,12 @@ lazy.setup({
     "nvim-telescope/telescope.nvim",
     version = false,
     cmd = "Telescope",
+    event = "VeryLazy",
   },
 
   {
     "nvim-telescope/telescope-file-browser.nvim",
+    event = "VeryLazy",
   },
 
   {
@@ -179,17 +186,21 @@ lazy.setup({
 
   {
     "windwp/nvim-ts-autotag",
+    event = "VeryLazy",
   },
   {
     "norcalli/nvim-colorizer.lua",
+    event = "VeryLazy",
   },
 
   {
     "akinsho/flutter-tools.nvim",
+    event = "VeryLazy",
   },
 
   {
     "folke/zen-mode.nvim",
+    event = "VeryLazy",
   },
   {
     "akinsho/nvim-bufferline.lua",
@@ -208,10 +219,12 @@ lazy.setup({
       vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
+    event = "VeryLazy",
   },
 
   {
     "dinhhuy258/git.nvim",
+    event = "VeryLazy",
   }, -- For git blame & browse
 }, {
   defaults = { lazy = true },
