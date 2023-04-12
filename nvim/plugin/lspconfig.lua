@@ -98,7 +98,8 @@ nvim_lsp.clangd.setup({
     on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
   end,
-  filetypes = { "c", "cpp", "csharp" },
+  filetypes = { "c", "cpp" },
+  cmd = { "clangd" },
   capabilities = capabilities,
 })
 
