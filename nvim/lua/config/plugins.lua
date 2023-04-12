@@ -130,6 +130,7 @@ lazy.setup({
   {
     "williamboman/mason.nvim",
     cmd = "Mason",
+    build = ":MasonUpdate",
     event = "VeryLazy",
   },
 
@@ -201,6 +202,7 @@ lazy.setup({
 
   {
     "akinsho/flutter-tools.nvim",
+    enabled = false,
     event = "VeryLazy",
   },
 
