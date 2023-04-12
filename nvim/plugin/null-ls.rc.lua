@@ -26,16 +26,18 @@ null_ls.setup({
             timeout = 5000,
         }), ]]
     --[[ null_ls.builtins.formatting.clang_format.with({
-      filetypes = { "c", "cpp", "csharp" },
+      filetypes = { "c", "cpp" },
+      extra_args = { "-style=file" },
     }), ]]
     null_ls.builtins.formatting.prettierd.with({
-      filetypes = { "html", "css", "js" },
+      filetypes = { "html", "css", "javascript" },
     }),
     -- null_ls.builtins.formatting.clang_format,
     null_ls.builtins.formatting.stylua.with({
       filetypes = { "lua", "luado" },
     }),
-    null_ls.builtins.formatting.eslint_d.with({ -- js/ts linter
+    null_ls.builtins.formatting.eslint_d.with({
+      -- js/ts linter
       -- only enable eslint if root has .eslintrc.js
       diagnostics_format = "[eslint] #{m}\n(#{c})",
       condition = function(utils)
