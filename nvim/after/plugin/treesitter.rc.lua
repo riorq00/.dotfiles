@@ -12,10 +12,17 @@ ts.setup({
     enable = true,
     disable = {},
   },
-  ensure_installed = {},
+  ensure_installed = {
+    "json",
+    "html",
+    "css",
+    "javascript",
+    "lua",
+  },
   autotag = {
     enable = true,
   },
+  additional_vim_regex_highlighting = false,
 })
 
 --[[ local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
