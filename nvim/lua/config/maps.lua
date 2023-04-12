@@ -54,7 +54,6 @@ keymap.set("n", "tra", "<S-v>:Translate en<CR>", opts)
 vim.cmd([[
   map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
   imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
-
 ]])
 
-vim.g.phyton3_host_prog = "/usr/local/bin/python3"
+-- vim.g.phyton3_host_prog = "/usr/local/bin/python3"
