@@ -20,6 +20,20 @@ local enable_format_on_save = function(_, bufnr)
     end,
   })
 end
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local bufnr = args.buf
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client.server_capabilities.completionProvider then
+      vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
+    end
+    if client.server_capabilities.definitionProvider then
+      vim.bo[bufnr].tagfunc = "v:lua.vim.lsp.tagfunc"
+    end
+  end,
+})
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
