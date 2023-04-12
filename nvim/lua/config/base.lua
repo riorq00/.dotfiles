@@ -44,3 +44,13 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 vim.opt.formatoptions:append({ "r" })
 
 vim.opt.clipboard:append({ "unnamedplus" })
+
+-- FileType specific
+vim.api.nvim_create_autocmd({ "FileType " }, {
+  pattern = { "c", "cpp", "csharp" },
+  callback = function()
+    vim.bo.tabstop = 8
+    vim.bo.shiftwidth = 8
+    vim.bo.expandtab = true
+  end,
+})
