@@ -30,7 +30,7 @@ Group.new("CmpItemMenu", colors.none, colors.background, styles.NONE)
 
 -- CHANGE SOME COLORS TO THE OLD VERSION OF THE THEME
 -- n.Group.new("@parameter", n.colors.base0)
--- n.Group.new("@variable", n.colors.blue)
+-- n.Group.new("@variable", n.colors.base0)
 -- n.Group.new("Special", colors.red)
 -- n.Group.new("Preproc", colors.orange)
 
@@ -54,3 +54,9 @@ Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl,
 Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)
 
 Group.new("HoverBorder", colors.yellow, colors.none, styles.NONE)
+
+--[[ for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+  vim.api.nvim_set_hl(0, group, {})
+end ]]
+-- TEMPORARY
+vim.api.nvim_set_hl(0, "@lsp.type.variable", {})
