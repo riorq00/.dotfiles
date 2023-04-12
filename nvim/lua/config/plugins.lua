@@ -237,6 +237,9 @@ lazy.setup({
   }, -- For git blame & browse
 }, {
   defaults = { lazy = true },
+  ui = {
+    border = "rounded",
+  },
   checker = {
     enabled = true,
     concurrency = 2,
@@ -246,6 +249,8 @@ lazy.setup({
     cache = {
       enabled = true,
     },
+    disable_events = { "UIEnter", "BufReadPre" },
+    reset_packpath = true,
     rtp = {
       disabled_plugins = {
         "gzip",
