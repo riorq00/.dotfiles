@@ -32,3 +32,5 @@ alias vimdiff="nvim -d"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[[ -r /usr/share/z/z.sh ]] && source /usr/share/z/z.sh
