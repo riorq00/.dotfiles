@@ -41,6 +41,12 @@ lazy.setup({
     event = "VeryLazy",
   },
   {
+    "andreyorst/SimpleClangFormat.vim",
+    enabled = false,
+    event = "VeryLazy",
+    cmd = "ClangFormat",
+  },
+  {
     "fsouza/prettierd",
     cmd = "Prettierd",
     event = "BufEnter",
