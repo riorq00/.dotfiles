@@ -8,9 +8,9 @@ saga.setup({
     winblend = 0,
     border = "rounded",
     theme = "round",
-    --[[ colors = {
+    colors = {
       normal_bg = "#002b36",
-    }, ]]
+    },
   },
 })
 
