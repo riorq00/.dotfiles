@@ -1,7 +1,0 @@
-
-root = true
-
-[*.{yaml,yml,md,html,lua,css,jsx,js,mjs,tsx,ts}]
-indent_style = space
-indent_size = 2
-tab_width = 2
