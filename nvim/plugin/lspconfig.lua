@@ -131,9 +131,6 @@ nvim_lsp.cssls.setup({
   },
 })
 
---[[ nvim_lsp.sourcekit.setup {
-  on_attach = on_attach,
-} ]]
 nvim_lsp.lua_ls.setup({
   capabilities = capabilities,
   on_attach = function(client, bufnr)
@@ -143,7 +140,6 @@ nvim_lsp.lua_ls.setup({
 })
 nvim_lsp.tailwindcss.setup({
   on_attach = on_attach,
-  -- cmd = { "tailwindcss-language-server.cmd", "--stdio" },
   settings = {
     tailwindCSS = {
       emmetCompletions = true,
@@ -170,7 +166,6 @@ nvim_lsp.html.setup({
 })
 
 nvim_lsp.emmet_ls.setup({
-  -- on_attach = on_attach,
   capabilities = capabilities,
   cmd = { "emmet-ls", "--stdio" },
   filetypes = { "html", "tailwindcss", "typescriptreact", "javascriptreact", "sass", "scss", "less" },
