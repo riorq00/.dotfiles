@@ -18,6 +18,10 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
+if [[ -e ~/.dotfiles/zsh/mouse.sh ]]; then 
+  source ~/.dotfiles/zsh/mouse.sh
+fi
+
 alias lon="xset led on"
 alias lof="xset led off"
 
@@ -27,8 +31,11 @@ alias ll="exa -la -g --icons"
 alias g="git"
 alias vim="nvim"
 alias vimdiff="nvim -d"
+alias v="vim ."
 
 . /opt/asdf-vm/asdf.sh
+
+#. /home/riorq/.dotfiles/zsh/mouse.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
