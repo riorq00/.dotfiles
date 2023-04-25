@@ -369,6 +369,10 @@ globalkeys = gears.table.join(
 		awful.spawn.with_shell("/home/riorq/.config/rofi/scripts/rofi-wifi-menu.sh")
 	end, { description = "launcher rofi", group = "launcher" }),
 
+	awful.key({ modkey }, "F8", function()
+		awful.spawn.with_shell("nitrogen --random --set-scaled /home/riorq/Downloads/wallpapers/")
+	end, { description = "change wallpapers with nitrogen", group = "launcher" }),
+
 	-- Menubar
 	awful.key({ modkey }, "F3", function()
 		menubar.show()
@@ -620,3 +624,4 @@ awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("xset s off")
 awful.spawn.with_shell("xset -dpms")
 awful.spawn.with_shell("picom &")
+awful.spawn.with_shell("lon")
