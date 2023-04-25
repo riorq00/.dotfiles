@@ -59,4 +59,4 @@ Group.new("HoverBorder", colors.yellow, colors.none, styles.NONE)
   vim.api.nvim_set_hl(0, group, {})
 end ]]
 -- TEMPORARY
-vim.api.nvim_set_hl(0, "@lsp.type.variable", {})
+-- vim.api.nvim_set_hl(0, "@lsp.type.variable", {})
