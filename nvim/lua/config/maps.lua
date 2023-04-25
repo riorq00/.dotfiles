@@ -8,6 +8,7 @@ keymap.set("n", "pr", ":Prettier<CR>")
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
+keymap.set("i", "JK", "<ESC>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -46,7 +47,7 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Open menu of translate
-keymap.set({ "n", "v" }, "em", require("config.translates.init"), opts)
+keymap.set({ "n", "v" }, "tran", require("config.translates.init"), opts)
 
 -- Autotranslate to english
 keymap.set("n", "tra", "<S-v>:Translate en<CR>", opts)
