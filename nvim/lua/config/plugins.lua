@@ -11,8 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local ok, lazy = pcall(require, "lazy")
-if not ok then
+local status, lazy = pcall(require, "lazy")
+if not status then
   return
 end
 
