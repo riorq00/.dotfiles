@@ -49,8 +49,8 @@ vim.opt.clipboard:append({ "unnamedplus" })
 vim.api.nvim_create_autocmd({ "FileType " }, {
   pattern = { "c", "cpp", "csharp" },
   callback = function()
-    vim.bo.tabstop = 8
-    vim.bo.shiftwidth = 8
+    vim.bo.tabstop = 4
+    vim.bo.shiftwidth = 4
     vim.bo.expandtab = true
   end,
 })
