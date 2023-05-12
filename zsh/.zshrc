@@ -32,6 +32,7 @@ alias g="git"
 alias vim="nvim"
 alias vimdiff="nvim -d"
 alias v="vim ."
+alias nf="neofetch"
 
 . /opt/asdf-vm/asdf.sh
 
