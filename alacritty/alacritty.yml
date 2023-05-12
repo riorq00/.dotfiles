@@ -28,16 +28,16 @@ window:
 
 font:
   normal:
-    family: Hack Nerd Font
+    family: Cascadia Mono PL
     style: Regular
   bold:
-    family: Hack Nerd Font
+    family: Cascadia Mono PL
     style: Bold
   italic:
-    family: Hack Nerd Font
+    family: Cascadia Mono PL
     style: Italic
   bold_italic:
-    family: Hack Nerd Font
+    family: Cascadia Mono PL
     style: Bold Italic
 
   size: 9
