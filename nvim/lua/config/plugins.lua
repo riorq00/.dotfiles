@@ -170,14 +170,14 @@ lazy.setup({
   },
 
   {
-    "kyazdani42/nvim-web-devicons", -- File icons
+    "nvim-tree/nvim-web-devicons", -- File icons
     lazy = true,
   },
 
   {
     "nvim-telescope/telescope.nvim",
-    version = false,
     cmd = "Telescope",
+    tag = "0.1.1",
     event = "VeryLazy",
   },
 

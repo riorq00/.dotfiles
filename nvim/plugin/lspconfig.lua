@@ -105,8 +105,6 @@ nvim_lsp.clangd.setup({
 
 nvim_lsp.tsserver.setup({
   on_attach = on_attach,
-  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" },
   root_dir = function()
     return vim.loop.cwd()
   end, -- run lsp for javascript in any directory
@@ -116,19 +114,6 @@ nvim_lsp.tsserver.setup({
 nvim_lsp.cssls.setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  cmd = { "vscode-css-language-server", "--stdio" },
-  filetypes = { "css", "scss", "less" },
-  settings = {
-    css = {
-      validate = true,
-    },
-    less = {
-      validate = true,
-    },
-    scss = {
-      validate = true,
-    },
-  },
 })
 
 nvim_lsp.lua_ls.setup({
@@ -153,13 +138,7 @@ nvim_lsp.html.setup({
     on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
   end,
-  filetypes = { "html" },
   init_options = {
-    configurationSection = { "html", "css", "javascript" },
-    embeddedLanguages = {
-      css = true,
-      javascript = true,
-    },
     provideFormatter = false,
   },
   capabilities = capabilities,
@@ -167,15 +146,7 @@ nvim_lsp.html.setup({
 
 nvim_lsp.emmet_ls.setup({
   capabilities = capabilities,
-  cmd = { "emmet-ls", "--stdio" },
   filetypes = { "html", "tailwindcss", "typescriptreact", "javascriptreact", "sass", "scss", "less" },
-  init_options = {
-    html = {
-      options = {
-        ["bem.enabled"] = true,
-      },
-    },
-  },
 })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -186,7 +157,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 
 -- Diagnostic symbols in the sign column (gutter)
-local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })

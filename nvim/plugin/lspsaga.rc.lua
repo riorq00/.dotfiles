@@ -3,11 +3,12 @@ if not status then
   return
 end
 
+local map = vim.keymap
+
 saga.setup({
   ui = {
-    winblend = 0,
     border = "rounded",
-    theme = "round",
+    -- theme = "round",
     colors = {
       normal_bg = "#002b36",
     },
