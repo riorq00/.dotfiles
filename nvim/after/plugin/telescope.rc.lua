@@ -76,10 +76,12 @@ vim.keymap.set("n", "sf", function()
     path = "%:p:h",
     cwd = telescope_buffer_dir(),
     respect_gitignore = false,
-    hidden = true,
+    hidden = false,
     grouped = true,
     previewer = false,
     initial_mode = "normal",
     layout_config = { height = 50 },
   })
 end)
+
+telescope.load_extension("lazygit")
