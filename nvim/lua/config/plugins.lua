@@ -41,10 +41,32 @@ lazy.setup({
     event = "VeryLazy",
   },
   {
+    "kdheepak/lazygit.nvim",
+    cmd = "LazyGit",
+    event = "VeryLazy",
+  },
+  {
+    "folke/noice.nvim",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+    event = "VeryLazy",
+    config = function()
+      require("noice").setup({
+        -- add any options here
+      })
+    end,
+  },
+  {
     "andreyorst/SimpleClangFormat.vim",
     enabled = false,
     event = "VeryLazy",
     cmd = "ClangFormat",
+  },
+  {
+    "mg979/vim-visual-multi",
+    branch = "master",
+    event = "VeryLazy",
   },
   {
     "fsouza/prettierd",
