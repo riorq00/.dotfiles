@@ -1,0 +1,15 @@
+gui:
+  showIcons: true
+  border: 'rounded'
+  theme:
+     activeBorderColor:
+       - yellow
+       - bold
+     inactiveBorderColor:
+       - cyan
+     optionsTextColor:
+       - cyan
+     selectedLineBgColor:
+       - blue # set to `default` to have no background colour
+     selectedRangeBgColor:
+       - blue
