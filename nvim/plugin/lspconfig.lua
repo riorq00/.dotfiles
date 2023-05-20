@@ -86,7 +86,24 @@ protocol.CompletionItemKind = {
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+--capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem = {
+  documentationFormat = { "markdown", "plaintext" },
+  snippetSupport = true,
+  preselectSupport = true,
+  insertReplaceSupport = true,
+  labelDetailsSupport = true,
+  deprecatedSupport = true,
+  commitCharactersSupport = true,
+  tagSupport = { valueSet = { 1 } },
+  resolveSupport = {
+    properties = {
+      "documentation",
+      "detail",
+      "additionalTextEdits",
+    },
+  },
+}
 
 nvim_lsp.flow.setup({
   on_attach = on_attach,
@@ -112,16 +129,22 @@ nvim_lsp.tsserver.setup({
 })
 
 nvim_lsp.cssls.setup({
-  capabilities = capabilities,
   on_attach = on_attach,
+  capabilities = capabilities,
 })
 
 nvim_lsp.lua_ls.setup({
-  capabilities = capabilities,
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
   end,
+  settings = {
+    Lua = {
+      diagnostics = { globals = { "vim" } },
+      telemetry = { enable = false },
+    },
+  },
+  capabilities = capabilities,
 })
 nvim_lsp.tailwindcss.setup({
   on_attach = on_attach,
