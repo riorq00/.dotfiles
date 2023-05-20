@@ -5,7 +5,8 @@
 
 import:
   #- ~/.config/alacritty/themes/alacritty-theme/themes/tokyo-night-storm.yaml
-  - ~/.config/alacritty/themes/alacritty-theme/themes/solarized_dark.yaml
+  #- ~/.config/alacritty/themes/alacritty-theme/themes/solarized_dark.yaml
+  - ~/.config/alacritty/themes/alacritty-theme/themes/riorkk.yaml
   #- ~/.config/alacritty/themes/alacritty-theme/themes/tokyo-night.yaml
 
 
