@@ -173,7 +173,7 @@ lazy.setup({
 
   {
     "glepnir/lspsaga.nvim",
-    event = "BufRead",
+    event = "LspAttach",
   }, -- LSP UIs
 
   {
@@ -193,6 +193,7 @@ lazy.setup({
 
   {
     "nvim-tree/nvim-web-devicons", -- File icons
+    tag = "nerd-v2-compat",
     lazy = true,
   },
 
