@@ -58,6 +58,11 @@ Group.new("HoverBorder", colors.yellow, colors.none, styles.NONE)
 -- TEMPORARY
 --vim.api.nvim_set_hl(0, "@lsp.type.variable", {})
 
-for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
-  vim.api.nvim_set_hl(0, group, {})
-end
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "c", "html", "tsx", "cpp", "flutter", "rust", "javascript" },
+  callback = function()
+    for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+      vim.api.nvim_set_hl(0, group, {})
+    end
+  end,
+})
