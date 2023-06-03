@@ -110,6 +110,18 @@ nvim_lsp.flow.setup({
   capabilities = capabilities,
 })
 
+nvim_lsp.rust_analyzer.setup({
+  on_attach = on_attach,
+  settings = {
+    ["rust-analyzer"] = {
+      diagnostics = {
+        enable = true,
+      },
+    },
+  },
+  capabilities = capabilities,
+})
+
 nvim_lsp.clangd.setup({
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
@@ -140,7 +152,13 @@ nvim_lsp.lua_ls.setup({
   end,
   settings = {
     Lua = {
+      runtime = {
+        version = "LuaJIT",
+      },
       diagnostics = { globals = { "vim" } },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
       telemetry = { enable = false },
     },
   },

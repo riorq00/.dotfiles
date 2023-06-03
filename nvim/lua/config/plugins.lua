@@ -46,20 +46,26 @@ lazy.setup({
     event = "VeryLazy",
   },
   {
-    "folke/noice.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
-    event = "VeryLazy",
-    config = function()
-      require("noice").setup({
-        -- add any options here
-      })
+    "rust-lang/rust.vim",
+    ft = { "rust" },
+    init = function()
+      vim.g.rustfmt_autosave = 1
     end,
+    event = "VeryLazy",
+  },
+  {
+    "simrat39/rust-tools.nvim",
+    ft = { "rust" },
+    dependencies = "neovim/nvim-lspconfig",
+    config = function()
+      require("rust-tools").setup()
+    end,
+    event = "VeryLazy",
   },
   {
     "andreyorst/SimpleClangFormat.vim",
     enabled = false,
+    ft = "c",
     event = "VeryLazy",
     cmd = "ClangFormat",
   },
@@ -70,6 +76,7 @@ lazy.setup({
   },
   {
     "fsouza/prettierd",
+    ft = { "javascript", "css", "html", "tsx", "typescript", "javascriptreact" },
     cmd = "Prettierd",
     event = "BufEnter",
   },
@@ -113,12 +120,13 @@ lazy.setup({
     priority = 2000,
     lazy = true,
     event = "BufEnter",
+    version = "*",
   },
 
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
-  }, -- Statusline
+  },
 
   {
     "numToStr/Comment.nvim",
@@ -178,6 +186,7 @@ lazy.setup({
 
   {
     "L3MON4D3/LuaSnip",
+    build = "make install_jsregexp",
     event = "VeryLazy",
   },
 
@@ -225,6 +234,7 @@ lazy.setup({
 
   {
     "akinsho/flutter-tools.nvim",
+    ft = "flutter",
     enabled = false,
     event = "VeryLazy",
   },
@@ -245,6 +255,7 @@ lazy.setup({
 
   {
     "toppair/peek.nvim",
+    ft = "markdown",
     build = "deno task --quiet build:fast",
     cmd = { "PeekOpen", "PeekClose" },
     config = function()
@@ -262,6 +273,20 @@ lazy.setup({
   defaults = { lazy = true },
   ui = {
     border = "rounded",
+    icons = {
+      cmd = "⌘",
+      config = "🛠",
+      event = "📅",
+      ft = "📂",
+      init = "⚙",
+      keys = "🗝",
+      plugin = "🔌",
+      runtime = "💻",
+      source = "📄",
+      start = "🚀",
+      task = "📌",
+      lazy = "💤 ",
+    },
   },
   checker = {
     enabled = true,
