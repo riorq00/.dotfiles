@@ -33,7 +33,7 @@ lspkind.init({
     Value = "",
     Enum = "",
     Keyword = "",
-    Snippet = "",
+    Snippet = " ",
     Color = "",
     File = "",
     Reference = "",
@@ -43,6 +43,6 @@ lspkind.init({
     Struct = "פּ",
     Event = "",
     Operator = "",
-    TypeParameter = "",
+    TypeParameter = " ",
   },
 })
