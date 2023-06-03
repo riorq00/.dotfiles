@@ -35,6 +35,7 @@ alias v="vim ."
 alias nf="neofetch"
 
 . /opt/asdf-vm/asdf.sh
+. /home/riorq/.cargo/bin
 
 #. /home/riorq/.dotfiles/zsh/mouse.sh
 
