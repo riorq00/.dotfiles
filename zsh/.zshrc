@@ -18,9 +18,9 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-if [[ -e ~/.dotfiles/zsh/mouse.sh ]]; then 
-  source ~/.dotfiles/zsh/mouse.sh
-fi
+#if [[ -e ~/.dotfiles/zsh/mouse.sh ]]; then 
+#  source ~/.dotfiles/zsh/mouse.sh
+#fi
 
 alias lon="xset led on"
 alias lof="xset led off"
