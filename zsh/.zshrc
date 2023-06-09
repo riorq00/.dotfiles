@@ -18,10 +18,6 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-#if [[ -e ~/.dotfiles/zsh/mouse.sh ]]; then 
-#  source ~/.dotfiles/zsh/mouse.sh
-#fi
-
 alias lon="xset led on"
 alias lof="xset led off"
 
@@ -33,6 +29,8 @@ alias vim="nvim"
 alias vimdiff="nvim -d"
 alias v="vim ."
 alias nf="neofetch"
+alias vsyncon="xrandr --output eDP --set TearFree on"
+alias vsyncoff="xrandr --output eDP --set TearFree off"
 
 . /opt/asdf-vm/asdf.sh
 . /home/riorq/.cargo/bin
