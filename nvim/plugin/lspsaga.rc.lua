@@ -29,7 +29,7 @@ map.set("n", "C-o", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 map.set("n", "gl", "<Cmd>Lspsaga show_line_diagnostics<CR>", opts)
 map.set("n", "K", "<Cmd>Lspsaga hover_doc<CR>", opts)
 map.set("n", "gf", "<Cmd>Lspsaga lsp_finder<CR>", opts)
-map.set("i", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+map.set("i", "<C-v>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 
 map.set("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", opts)
 map.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
