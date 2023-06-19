@@ -9,9 +9,9 @@ saga.setup({
   ui = {
     border = "rounded",
     -- theme = "round",
-    --[[ colors = {
+    colors = {
       normal_bg = "#002b36",
-    }, ]]
+    },
   },
   lightbulb = {
     enable = true,
@@ -19,6 +19,9 @@ saga.setup({
     sign = true,
     sign_priority = 40,
     virtual_text = true,
+  },
+  hover = {
+    open_browser = "!brave",
   },
 })
 

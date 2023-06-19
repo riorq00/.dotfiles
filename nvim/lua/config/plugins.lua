@@ -153,9 +153,15 @@ lazy.setup({
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-nvim-lsp-signature-help",
     },
   }, -- Completion
+
+  {
+    "hrsh7th/cmp-nvim-lsp-signature-help",
+    enabled = true,
+    version = "*",
+    event = "VeryLazy",
+  },
 
   {
     "williamboman/mason.nvim",
