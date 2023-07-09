@@ -187,7 +187,7 @@ nvim_lsp.html.setup({
   capabilities = capabilities,
 })
 
-nvim_lsp.emmet_ls.setup({
+nvim_lsp.emmet_language_server.setup({
   capabilities = capabilities,
   filetypes = { "html", "tailwindcss", "typescriptreact", "javascriptreact", "sass", "scss", "less" },
 })
