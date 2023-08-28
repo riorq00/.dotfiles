@@ -27,6 +27,7 @@ Group.new("CursorLineNr", colors.yellow, colors.NONE, styles.NONE, colors.base1)
 Group.new("Visual", colors.none, colors.base03, styles.reverse)
 Group.new("SagaNormal", colors.none, colors.background, styles.NONE)
 Group.new("CmpItemMenu", colors.none, colors.background, styles.NONE)
+Group.new("NormalFloat", colors.base1, colors.NONE, styles.NONE)
 
 -- CHANGE SOME COLORS TO THE OLD VERSION OF THE THEME
 -- n.Group.new("@parameter", n.colors.base0)
