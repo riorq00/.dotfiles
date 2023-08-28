@@ -41,6 +41,10 @@ lazy.setup({
     event = "VeryLazy",
   },
   {
+    "andweeb/presence.nvim",
+    event = "VeryLazy",
+  },
+  {
     "kdheepak/lazygit.nvim",
     cmd = "LazyGit",
     event = "VeryLazy",
@@ -186,7 +190,7 @@ lazy.setup({
   }, -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
 
   {
-    "glepnir/lspsaga.nvim",
+    "nvimdev/lspsaga.nvim",
     event = "LspAttach",
   }, -- LSP UIs
 
