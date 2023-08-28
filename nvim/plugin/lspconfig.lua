@@ -41,7 +41,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
   -- fix broken syntax highlighting problem
-  client.server_capabilities.semanticTokensProvider = nil
+  --client.server_capabilities.semanticTokensProvider = nil
 
   local function buf_set_option(...)
     vim.api.nvim_buf_set_option(bufnr, ...)
