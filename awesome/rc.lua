@@ -423,6 +423,12 @@ globalkeys = mytable.join(
 	end, { description = "delete tag", group = "tag" }),
 
 	-- Standard program
+	awful.key({ modkey }, "F1", function()
+		awful.spawn(browser)
+	end, { description = "open a browser", group = "launcher" }),
+	awful.key({ modkey }, "F2", function()
+		awful.spawn(fm)
+	end, { description = "open a file manager", group = "launcher" }),
 	awful.key({ modkey }, "Return", function()
 		awful.spawn(terminal)
 	end, { description = "open a terminal", group = "launcher" }),
