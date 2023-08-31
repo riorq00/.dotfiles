@@ -41,6 +41,22 @@ lazy.setup({
     event = "VeryLazy",
   },
   {
+    "nvimdev/indentmini.nvim",
+    event = "BufEnter",
+    enabled = false,
+    config = function()
+      require("indentmini").setup({
+        char = "|",
+        exclude = {
+          "erlang",
+          "markdown",
+        },
+      })
+      -- use comment color
+      vim.cmd.highlight("default link IndentLine Comment")
+    end,
+  },
+  {
     "andweeb/presence.nvim",
     event = "VeryLazy",
   },
