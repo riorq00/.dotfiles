@@ -10,6 +10,8 @@ local lain = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
 local dpi = require("beautiful.xresources").apply_dpi
+local logout_menu_widget = require("widgets.logout-menu-widget.logout-menu")
+local battery_widget = require("widgets.battery-widget.battery")
 
 local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
@@ -17,7 +19,8 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme = {}
 theme.dir = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
 theme.wallpaper = theme.dir .. "/wall.png"
-theme.font = "Terminus 9"
+--theme.font = "Terminus 9"
+theme.font = "Caskaydia Cove Nerd Font 7"
 theme.fg_normal = "#DDDDFF"
 theme.fg_focus = "#EA6F81"
 theme.fg_urgent = "#CC9393"
@@ -207,6 +210,7 @@ theme.fs = lain.widget.fs({
 -- Battery
 local baticon = wibox.widget.imagebox(theme.widget_battery)
 local bat = lain.widget.bat({
+	full_notify = "off",
 	settings = function()
 		if bat_now.status and bat_now.status ~= "N/A" then
 			if bat_now.ac_status == 1 then
@@ -334,7 +338,7 @@ function theme.at_screen_connect(s)
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
 			wibox.widget.systray(),
-			keyboardlayout,
+			--keyboardlayout,
 			spr,
 			arrl_ld,
 			wibox.container.background(mpdicon, theme.bg_focus),
@@ -358,7 +362,8 @@ function theme.at_screen_connect(s)
 			wibox.container.background(fsicon, theme.bg_focus),
 			--wibox.container.background(theme.fs.widget, theme.bg_focus),
 			arrl_dl,
-			baticon,
+			--baticon,
+			battery_widget({}),
 			bat.widget,
 			arrl_ld,
 			wibox.container.background(neticon, theme.bg_focus),
@@ -367,6 +372,7 @@ function theme.at_screen_connect(s)
 			clock,
 			spr,
 			arrl_ld,
+			wibox.container.background(logout_menu_widget(), theme.bg_focus),
 			wibox.container.background(s.mylayoutbox, theme.bg_focus),
 		},
 	})
