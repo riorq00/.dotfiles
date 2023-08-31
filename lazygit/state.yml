@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/riorq/.dotfiles
+- /home/riorq/.dotfiles
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: false
+ignorewhitespaceindiffview: false
