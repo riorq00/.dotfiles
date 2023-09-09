@@ -878,3 +878,4 @@ awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("xset s off")
 awful.spawn.with_shell("xset -dpms")
+awful.spawn.with_shell("xset led on")
