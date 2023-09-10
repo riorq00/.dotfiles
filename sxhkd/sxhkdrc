@@ -10,9 +10,29 @@ super + Return
 super + p
         /home/riorq/.config/rofi/launchers/type-2/launcher.sh
 
+super + F4
+        /home/riorq/.config/rofi/scripts/rofi-wifi-menu.sh
+
 # make sxhkd reload its configutation files:
 super + w
         pkill -USR1 -x sxhkd
+
+# bright
+super + XF86MonBrightnessUp
+        brightnessctl set +10
+
+super + XF86MonBrightnessDown
+        brightnessctl set 10-
+
+# audio
+super + XF86AudioLowerVolume
+        amixer -D pulse sset Master 5%-
+
+super + XF86AudioRaiseVolume
+        amixer -D pulse sset Master 5%+
+
+super + XF86AudioMute
+        amixer sset Master toggle
 
 # brave
 super + F1
