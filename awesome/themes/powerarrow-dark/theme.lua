@@ -363,7 +363,7 @@ function theme.at_screen_connect(s)
 			--wibox.container.background(theme.fs.widget, theme.bg_focus),
 			arrl_dl,
 			--baticon,
-			battery_widget({}),
+			--battery_widget({}),
 			bat.widget,
 			arrl_ld,
 			wibox.container.background(neticon, theme.bg_focus),
