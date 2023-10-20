@@ -61,7 +61,7 @@ opt.formatoptions:append({ "r" })
 opt.clipboard:append({ "unnamedplus" })
 
 -- FileType specific
-vim.api.nvim_create_autocmd({ "FileType " }, {
+vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "c", "cpp", "csharp" },
   callback = function()
     vim.bo.tabstop = 4
