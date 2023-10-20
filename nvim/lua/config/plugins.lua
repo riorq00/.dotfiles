@@ -235,7 +235,7 @@ lazy.setup({
   {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
-    tag = "0.1.1",
+    branch = "0.1.x",
     event = "VeryLazy",
   },
 
