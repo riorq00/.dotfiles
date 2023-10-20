@@ -13,8 +13,8 @@ alias lon="xset led on"
 alias lof="xset led off"
 
 
-alias ls="exa -a --icons"
-alias ll="exa -la -g --icons"
+alias ls="eza -a --icons"
+alias ll="eza -la -g --icons"
 alias g="git"
 alias vim="nvim"
 alias vimdiff="nvim -d"
