@@ -133,14 +133,26 @@ lazy.setup({
   },
   {
     "tjdevries/colorbuddy.nvim",
+    enabled = false
   },
 
   {
     "svrana/neosolarized.nvim",
-    priority = 2000,
+    priority = 99,
     lazy = true,
     event = "BufEnter",
     version = "*",
+    enabled = false,
+  },
+
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      vim.cmd [[colorscheme solarized-osaka]]
+    end,
   },
 
   {
