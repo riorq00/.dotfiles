@@ -40,7 +40,7 @@ super + F1
 
 # thunar
 super + F2
-        nautilus
+        thunar
 
 #
 # bspwm hotkeys
