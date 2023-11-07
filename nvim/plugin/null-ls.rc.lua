@@ -30,7 +30,7 @@ null_ls.setup({
       extra_args = { "-style=file" },
     }), ]]
     null_ls.builtins.formatting.prettierd.with({
-      filetypes = { "html", "css", "javascript" },
+      filetypes = { "html", "css", "javascript", "javascriptreact" },
     }),
     -- null_ls.builtins.formatting.clang_format,
     null_ls.builtins.formatting.stylua.with({
