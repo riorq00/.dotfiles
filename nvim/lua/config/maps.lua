@@ -109,3 +109,7 @@ keymap.set("n", "<Leader>ds", function()
   local widgets = require("dap.ui.widgets")
   widgets.centered_float(widgets.scopes)
 end)
+
+-- Moving Higlighted line like vscode
+keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+keymap.set('v', 'K', ":m '<-2<CR>gv=gv")

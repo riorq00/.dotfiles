@@ -30,7 +30,7 @@ null_ls.setup({
       extra_args = { "-style=file" },
     }), ]]
     null_ls.builtins.formatting.prettierd.with({
-      filetypes = { "html", "css", "javascript", "javascriptreact" },
+      filetypes = { "html", "css", "tsx", "javascript", "javascriptreact", "typescript", "typescriptreact" },
     }),
     -- null_ls.builtins.formatting.clang_format,
     null_ls.builtins.formatting.stylua.with({
@@ -41,7 +41,7 @@ null_ls.setup({
       -- only enable eslint if root has .eslintrc.js
       diagnostics_format = "[eslint] #{m}\n(#{c})",
       condition = function(utils)
-        return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
+        return utils.root_has_file(".eslintrc.js", ".eslintrc.json") -- change file extension if you use something else
       end,
     }),
   },
