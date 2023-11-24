@@ -1,1 +1,0 @@
-# Riorq's Neovim

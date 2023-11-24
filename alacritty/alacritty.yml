@@ -1,4 +1,3 @@
-
 #########
 # THEME #
 #########
@@ -9,9 +8,8 @@ import:
   - ~/.config/alacritty/themes/alacritty-theme/themes/riorkk.yaml
   #- ~/.config/alacritty/themes/alacritty-theme/themes/tokyo-night.yaml
 
-
 env:
-  TERM: xterm-256color 
+  TERM: xterm-256color
 
 ##########
 # WINDOW #
@@ -29,16 +27,16 @@ window:
 
 font:
   normal:
-    family: Caskaydia Cove Nerd Font
+    family: Caskaydia Cove NF
     style: Regular
   bold:
-    family: Caskaydia Cove Nerd Font
+    family: Caskaydia Cove NF
     style: Bold
   italic:
-    family: Caskaydia Cove Nerd Font
+    family: Caskaydia Cove NF
     style: Italic
   bold_italic:
-    family: Caskaydia Cove Nerd Font
+    family: Caskaydia Cove NF
     style: Bold Italic
 
   size: 9
@@ -53,10 +51,10 @@ font:
 draw_bold_text_with_bright_colors: true
 
 colors:
-   primary:
+  primary:
     #background: "#000000"
     #background: "#000F14"
-    background: '#001014'
+    background: "#001014"
     #background: '#000004'
     #foreground: '#c5c8c6'
 
@@ -66,4 +64,3 @@ colors:
 
 shell:
   program: /usr/bin/zsh
-
