@@ -29,16 +29,16 @@ window:
 
 font:
   normal:
-    family: Caskaydia Cove Nerd Font
+    family: Caskaydia Cove NF
     style: Regular
   bold:
-    family: Caskaydia Cove Nerd Font
+    family: Caskaydia Cove NF
     style: Bold
   italic:
-    family: Caskaydia Cove Nerd Font
+    family: Caskaydia Cove NF
     style: Italic
   bold_italic:
-    family: Caskaydia Cove Nerd Font
+    family: Caskaydia Cove NF
     style: Bold Italic
 
   size: 9
