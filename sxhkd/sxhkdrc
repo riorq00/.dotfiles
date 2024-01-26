@@ -32,7 +32,7 @@ super + XF86AudioRaiseVolume
         amixer -D pulse sset Master 5%+
 
 super + XF86AudioMute
-        amixer sset Master toggle
+        amixer -D pulse sset Master toggle
 
 # brave
 super + F1
@@ -133,3 +133,9 @@ super + control + {Left,Down,Up,Right}
 # move a floating window
 super + alt {Left,Down,Up,Right}
         bspc node -v {-20 0,0 20,0 -20,20 0}
+
+super + Scroll_Lock
+        xset led on
+
+super + ctrl + Scroll_Lock
+        xset led off
