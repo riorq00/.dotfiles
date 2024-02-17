@@ -19,11 +19,14 @@ return {
 		opts = {
 			highlighters = {
 				hsl_color = {
-					pattern = "hsl%(%d+,? %d+,? %d+%)",
+					pattern = "hsl%(%d+,? %d+%%?,? %d+%%?%)",
 					group = function(_, match)
-						local utils = require("craftzdog.utils")
-						local h, s, l = match:match("hsl%((%d+),? (%d+),? (%d+)%)")
-						h, s, l = tonumber(h), tonumber(s), tonumber(l)
+						local utils = require("solarized-osaka.hsl")
+						--- @type string, string, string
+						local nh, ns, nl = match:match("hsl%((%d+),? (%d+),? (%d+)%)")
+						--- @type number?, number?, number?
+						local h, s, l = tonumber(nh), tonumber(ns), tonumber(nl)
+						--- @type string
 						local hex_color = utils.hslToHex(h, s, l)
 						return MiniHipatterns.compute_hex_color_group(hex_color, "bg")
 					end,
@@ -79,7 +82,9 @@ return {
 				";r",
 				function()
 					local builtin = require("telescope.builtin")
-					builtin.live_grep()
+					builtin.live_grep({
+						addicional_args = { "--hidden" },
+					})
 				end,
 				desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
 			},
