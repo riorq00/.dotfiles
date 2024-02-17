@@ -119,6 +119,18 @@ super + ctrl + space
 super + ctrl + shift + space
         bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
+
+#
+# print
+#
+
+super + Print
+        flameshot full -p ~/Downloads/besteiras/prints/
+
+super + shift + Print
+        flameshot gui -p ~/Downloads/besteiras/prints/
+
+
 #
 # move/resize
 #
